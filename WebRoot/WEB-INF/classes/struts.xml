@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="100000000"/> 
+	<package name="ausemi2" 	namespace="/"  extends="json-default">
+		<action name="login" class="com.ausemi2.action.Login">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 获取公司简介 -->
+		<action name="companyOverview"  class="com.ausemi2.action.OverviewAction" method="findView">
+			<result type="json">
+				<param name="root">overviews</param>
+			</result>
+		</action> 
+		<!-- 修改公司简介 -->
+		<action name="editOverview"  class="com.ausemi2.action.OverviewAction" method="editView">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 获取企业质量 -->
+		<action name="companyQuality"  class="com.ausemi2.action.QualityAction" method="findQuality">
+			<result type="json">
+				<param name="root">qualitys</param>
+			</result>
+		</action>
+		<!-- 修改企业质量 -->
+		<action name="editQuality"  class="com.ausemi2.action.QualityAction" method="editQuality">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 查询企业文化 -->
+		<action name="companyCulture" class="com.ausemi2.action.CultureAction" method="findCulture">
+			<result type="json">
+				<param name="root">cultures</param>
+			</result>
+		</action>
+		<!-- 修改企业文化 -->
+		<action name="editCulture" class="com.ausemi2.action.CultureAction"	 method="editCulture">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 查询招聘 -->
+		<action name="companyCareers" class="com.ausemi2.action.CareersAction" method="findCareers">
+			<result type="json">
+				<param name="root">careerss</param>
+			</result>
+		</action>
+		<!-- 修改招聘 -->
+		<action name="editCareers" class="com.ausemi2.action.CareersAction"	 method="editCareers">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 返回所有新闻信息 -->
+		<action name="allNews" class="com.ausemi2.action.NewsAction"	 method="allNews">
+			<result type="json">
+				<param name="root">newss</param>
+			</result>
+		</action>
+		<!-- 修改新闻 -->
+		<action name="editNews" class="com.ausemi2.action.NewsAction"	 method="editNews">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 查询所有留言信息 -->
+		<action name="allMessage" class="com.ausemi2.action.MessageAction"	 method="findAllMessage">
+			<result type="json">
+				<param name="root">allMessage</param>
+			</result>
+		</action>
+		<!-- 删除留言信息 -->
+		<action name="deleteMessage" class="com.ausemi2.action.MessageAction"	 method="deleteMessage">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<action name="message" class="com.ausemi2.action.MessageAction" method="newMessage">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 返回所有代理商信息 -->
+		<action name="allAgent" class="com.ausemi2.action.AgentAction"	 method="allAgent">
+			<result type="json">
+				<param name="root">allAgent</param>
+			</result>
+		</action>
+		<!-- 新增代理商 -->
+		<action name="newAgent" class="com.ausemi2.action.AgentAction"	 method="newAgent">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 删除代理商 -->
+		<action name="deleteAgent" class="com.ausemi2.action.AgentAction"	 method="deleteAgent">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 修改代理商 -->
+		<action name="editAgent" class="com.ausemi2.action.AgentAction"	 method="editAgent">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+
+		<!-- 返回所有LvMosfet产品 -->
+				<action name="allLvMosfet" class="com.ausemi2.action.LvMosfetAction"	 method="allLvMosfet">
+			<result type="json">
+				<param name="root">allLvMosfet</param>
+			</result>
+		</action>
+		<!-- 添加产品 -->
+		<action name="newLvMosfet" class="com.ausemi2.action.LvMosfetAction"	 method="addProduct">
+			<interceptor-ref name="fileUploadStack"></interceptor-ref>
+			<result type="json">
+			<param name="contentType">text/html</param> 
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 删除LV产品 -->
+		<action name="deleteLvMosfet" class="com.ausemi2.action.LvMosfetAction"	 method="deleteLvMosfet">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 修改LV产品 -->
+		<action name="editLvMosfet" class="com.ausemi2.action.LvMosfetAction"	 method="editLvMosfet">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 添加HV产品 -->
+		<action name="newHvMosfet" class="com.ausemi2.action.HvMosfetAction"	 method="addProduct">
+			<interceptor-ref name="fileUploadStack"></interceptor-ref>
+			<result type="json">
+			<param name="contentType">text/html</param> 
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 返回所有HV产品 -->
+				<action name="allHvMosfet" class="com.ausemi2.action.HvMosfetAction"	 method="allHvMosfet">
+			<result type="json">
+				<param name="root">allHvMosfet</param>
+			</result>
+		</action>
+		<!-- 删除HV产品 -->
+		<action name="deleteHvMosfet" class="com.ausemi2.action.HvMosfetAction"	 method="deleteHvMosfet">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 修改HV产品 -->
+		<action name="editHvMosfet" class="com.ausemi2.action.HvMosfetAction"	 method="editHvMosfet">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 添加VD产品 -->
+		<action name="newVdMosfet" class="com.ausemi2.action.VdMosfetAction"	 method="addProduct">
+			<interceptor-ref name="fileUploadStack"></interceptor-ref>
+			<result type="json">
+			<param name="contentType">text/html</param> 
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 返回所有VD产品 -->
+				<action name="allVdMosfet" class="com.ausemi2.action.VdMosfetAction"	 method="allVdMosfet">
+			<result type="json">
+				<param name="root">allVdMosfet</param>
+			</result>
+		</action>
+		<!-- 删除VD产品 -->
+		<action name="deleteVdMosfet" class="com.ausemi2.action.VdMosfetAction"	 method="deleteVdMosfet">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 修改VD产品 -->
+		<action name="editVdMosfet" class="com.ausemi2.action.VdMosfetAction"	 method="editVdMosfet">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 添加SR产品 -->
+		<action name="newSrModule" class="com.ausemi2.action.SrModuleAction"	 method="addProduct">
+			<interceptor-ref name="fileUploadStack"></interceptor-ref>
+			<result type="json">
+			<param name="contentType">text/html</param> 
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 返回所有SR产品 -->
+				<action name="allSrModule" class="com.ausemi2.action.SrModuleAction"	 method="allSrModule">
+			<result type="json">
+				<param name="root">allSrModule</param>
+			</result>
+		</action>
+		<!-- 删除SR产品 -->
+		<action name="deleteSrModule" class="com.ausemi2.action.SrModuleAction"	 method="deleteSrModule">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 修改SR产品 -->
+		<action name="editSrModule" class="com.ausemi2.action.SrModuleAction"	 method="editSrModule">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 查看信息 -->
+		<action name="checkInfo" class="com.ausemi2.action.InfoAction" method="checkInfo">
+			<result type="json">
+				<param name="root">info</param>
+			</result>
+		</action>
+		<!-- 返回信息 -->
+		<action name="editInfo" class="com.ausemi2.action.InfoAction" method="editInfo">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 搜索 -->
+		<action name="search" class="com.ausemi2.action.SearchAction" method="find">
+			<result type="json">
+				<param name="root">allSearch</param>
+			</result>
+		</action>
+				<!-- 发送邮件 -->
+		<action name="sendEmail" class="com.ausemi2.action.EmailAction">
+			<result type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+	</package>
+</struts>    

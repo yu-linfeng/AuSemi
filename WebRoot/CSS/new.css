@@ -1,0 +1,115 @@
+body{
+	text-align:center;
+}
+#header {
+	background-image:url(../Img/logo2.jpg);
+	height:200px;
+	width:1000px;
+	background-repeat:no repeat;
+	margin:0 auto;
+}
+
+#main{
+	width: 1000px;
+	padding:0px 0;
+	margin:0 auto;
+	text-align:center;
+}
+#productHref a:hover{
+	color: #CD3700;
+}
+#menu {
+	/*background-color:rgb(255,100,100);*/
+    /*background-color:rgb(100,149,237);*/
+    background:#4169E1; 
+	width: 1000px; 
+	height:50px; 
+	line-height:50px;
+	margin:0 auto;
+}
+#menu ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+#menu ul li {
+	float: left;
+	display: inline;
+    position:relative;
+}
+
+/* sub #menuigation */
+#menu li ul {    
+  background:#4169E1;       /*下拉菜单背景色*/
+    /*background-color:rgb(225,75,75);*/
+    position:absolute;
+    left:0;
+    top:40px; /* make this equal to the line-height of the links (specified below) */
+    width:200px;
+}
+#menu li li {
+	clear: both;		/*父元素设置横向显示li，应该清除*/
+    position:relative;
+    margin:0;
+    display:block;
+}
+#menu li li ul {
+    position:absolute;
+    top:0;
+    left:200px; /* make this equal to the width of the sub #menu above */
+    margin:0;
+}
+
+/* style all links */
+#menu a {
+    text-decoration:none;
+    font-weight: block;
+	font-size: 20;
+	color:#FFFFFF;
+	margin-left:50px;
+}
+/*导航栏字体*/
+#menu a {
+    color:#ffffff;
+    text-decoration:none;
+    display:block;
+    font-weight: normal;
+    font-size: 14px;
+}
+#menu a:hover,
+#menu a:focus,
+#menu a:active {
+    color:#A52A2A;
+}
+
+/* style sub level links */
+#menu li li a {
+    width:180px;
+    border-bottom:solid 1px rgb(255,255,255);     /*分割线*/
+    margin:0 10px;
+    padding:0;
+}
+#menu li li:last-child a {
+    border-bottom:none;
+}
+
+/* hide sub menu links */
+ul.sub-menu {
+    display:none;
+}
+
+/* show arrows for dropdowns */
+
+
+#menu li li.dropdown > a {
+    background-image:url('../Img/arrow-right.png');
+    background-position:right 16px;
+    background-repeat:no-repeat;
+}
+.navContent{
+	text-align: center;
+	width: 70%;
+	max-width:1200px;
+    margin:0 auto;
+    font-size: 17px;
+}

@@ -1,0 +1,159 @@
+
+/* =Global
+-------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(255,255,255);		/*背景色*/
+    color:rgb(50,50,50);
+    font-family: Microsoft YaHei;
+    font-weight:300;
+    font-size:14px;
+    line-height:1.5;
+}
+
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	line-height:1;
+	font-weight: 300;
+}
+a {
+    text-decoration:none;
+    color:rgb(100,150,200);
+}
+a:hover {
+    color:rgb(50,50,50);
+}
+
+
+
+/* =Template
+-------------------------------------------------------------- */
+#wrapper {
+    width:100%;
+    margin:0 auto;
+}
+
+#main {
+	padding:0px 0;
+}
+.content {
+  /*width:70%;		//下方大小*/  
+  /*  max-width:1000px;*/
+  	width: 1000px;
+    margin:0 auto;
+    font-size: 15px;	/*首页企业介绍字体大小*/
+    font-family: Microsoft YaHei;
+}
+.tableContent{
+	font-size: 12px;
+	font-family: Microsoft YaHei;
+	text-align: center;
+
+}
+
+/* =Top Bar
+-------------------------------------------------------------- */
+#top-bar {
+	background-color:rgb(100,150,200);
+}
+#top-bar a {
+	color:#fff;
+	font-size:14px;
+	text-transform:uppercase;
+	display:inline-block;
+	margin:0;
+	padding:10px;
+}
+#top-bar a:hover{
+	background-color:rgb(150,200,250);
+}
+span.all-labs,
+span.back-to-tutorial {
+	display:block;
+	width:50%;
+}
+span.all-labs {
+	float:left;
+	text-align:left;
+}
+span.back-to-tutorial {
+	float:right;
+	text-align:right;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+header {
+	padding:0px 0;
+		width:100%;
+	text-align:center;
+}
+#title {
+	width:100%;
+	text-align:center;
+}
+#title h1 {
+	color:#fff;
+	font-size: 30px;
+	margin-bottom:10px;
+}
+#title h2 {
+	color:rgb(200,200,200);
+	font-size:20px;
+
+}
+/* =Extras
+-------------------------------------------------------------- */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+/*主页主标题*/
+.headline{
+	font-size: 40px;
+	color: #423485;
+	font-family: Microsoft YaHei;
+}
+/*主页副标题*/
+.headline2{
+	text-align: center;
+	font-size: 25px;
+	color: #423485;
+	font-family: Microsoft YaHei;
+}
+/*小标题*/
+.headline3{
+	text-align: left;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Microsoft YaHei;
+}
+/*正文中的超链接*/
+.hrefContent{
+	color: #0000CD;
+	text-decoration: underline;
+}
+/*目录链接*/
+.hrefContentTree{
+	font-size:16px;
+	color: #0000CD;
+	text-decoration: none;
+}
+#agentFont{
+	font-size: 40px;
+}
+/*树*/
+.productTree{
+	text-align: left;
+}
